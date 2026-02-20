@@ -154,3 +154,20 @@
     (printout t "RECOMMENDATION: Pay down balances to improve credit score." crlf)
     (assert (warning risky-credit))
 )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 14 - Dangerous Credit Utilization (>50%)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule dangerous-credit-utilization-warning
+    "Urgent warning when credit utilization exceeds 50%"
+    (student-credit-utilization ?util)
+    (dangerous-credit-threshold ?threshold)
+    (test (> ?util ?threshold))
+    =>
+    (printout t "URGENT: Credit utilization at "
+        ?util "% - severe credit score impact!" crlf)
+    (printout t "RECOMMENDATION: Reduce balances immediately "
+        "or request credit limit increase." crlf)
+    (assert (warning dangerous-credit))
+)
