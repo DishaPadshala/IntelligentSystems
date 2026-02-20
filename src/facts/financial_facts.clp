@@ -1,8 +1,6 @@
 ;;;======================================================
 ;;; FINANCIAL FACTS
-<<<<<<< HEAD
 ;;; Author: Sneha
-=======
 ;;; Date: February 10, 2025
 ;;;======================================================
 
@@ -29,4 +27,16 @@
     (emergency-fund-minimum 1000)
     (emergency-fund-months 3)
     (tfsa-limit-2025 7000)
+)
+
+(deffacts financial-facts
+    (max-rent-percent 30)
+    (emergency-fund-minimum 1000)
+    (high-interest-threshold 15)
+)
+
+(deffacts test-scenario
+    (student-income 1500)
+    (student-rent 700)
+    (student-savings 300)
 )
