@@ -100,3 +100,18 @@
     (assert (warning low-savings-rate))
 )
 
+(defrule healthy-surplus
+    "Detect investable surplus over 20% of income"
+    (student-income ?income)
+    (student-fixed-expenses ?fixed)
+    (student-variable-expenses ?variable)
+    (test (> (- ?income (+ ?fixed ?variable))
+             (* 0.2 ?income)))
+    =>
+    (bind ?surplus (- ?income (+ ?fixed ?variable)))
+    (printout t "GOOD: Monthly surplus of $"
+        ?surplus " available" crlf)
+    (printout t "RECOMMENDATION: Invest surplus in "
+        "TFSA or index funds" crlf)
+    (assert (status healthy-surplus))
+)
