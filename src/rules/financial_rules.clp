@@ -115,3 +115,42 @@
         "TFSA or index funds" crlf)
     (assert (status healthy-surplus))
 )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 12 - Credit Card Debt Warning
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule credit-card-debt-warning
+    "Warn about credit card debt at or above average APR"
+    (student-credit-card-debt ?cc-debt)
+    (student-credit-card-apr ?apr)
+    (credit-card-avg-apr ?avg)
+    (test (> ?cc-debt 0))
+    (test (>= ?apr ?avg))
+    =>
+    (printout t "WARNING: $" ?cc-debt
+        " credit card debt at "
+        ?apr "% APR." crlf)
+    (printout t "RECOMMENDATION: Pay more than minimum. "
+        "Interest compounds monthly." crlf)
+    (assert (warning credit-card-debt))
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 13 - Risky Credit Utilization (30–50%)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule risky-credit-utilization-warning
+    "Warn when credit utilization is between 30% and 50%"
+    (student-credit-utilization ?util)
+    (risky-credit-threshold ?risky)
+    (dangerous-credit-threshold ?dangerous)
+    (test (> ?util ?risky))
+    (test (<= ?util ?dangerous))
+    =>
+    (printout t "WARNING: Credit utilization at "
+        ?util "% (recommended under "
+        ?risky "%)" crlf)
+    (printout t "RECOMMENDATION: Pay down balances to improve credit score." crlf)
+    (assert (warning risky-credit))
+)
