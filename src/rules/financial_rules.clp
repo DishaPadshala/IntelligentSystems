@@ -60,3 +60,18 @@
     =>
     (printout t "WARNING: Fixed expenses too high - " (round (/ (* ?fixed 100) ?income)) "% of income" crlf)
 )
+
+(defrule high-rent
+    "Warn if rent exceeds 30% of income"
+    (student-income ?income)
+    (student-rent ?rent)
+    (max-rent-percent ?max-percent)
+    (test (> (/ (* ?rent 100) ?income) ?max-percent))
+    =>
+    (printout t "WARNING: Rent is "
+        (round (/ (* ?rent 100) ?income))
+        "% of income (max " ?max-percent "%)" crlf)
+    (printout t "RECOMMENDATION: Consider roommates "
+        "or cheaper housing" crlf)
+    (assert (warning high-rent))
+)
