@@ -85,3 +85,18 @@
         "Any unexpected expense becomes a crisis." crlf)
     (assert (warning no-savings))
 )
+
+
+(defrule low-savings-rate
+    "Warn when saving but rate is below 10%"
+    (student-income ?income)
+    (student-savings ?savings)
+    (test (> ?savings 0))
+    (test (< (/ (* ?savings 100) ?income) 10))
+    =>
+    (printout t "WARNING: Savings rate only "
+        (round (/ (* ?savings 100) ?income))
+        "% - recommended minimum is 20%" crlf)
+    (assert (warning low-savings-rate))
+)
+
