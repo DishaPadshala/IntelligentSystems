@@ -75,3 +75,13 @@
         "or cheaper housing" crlf)
     (assert (warning high-rent))
 )
+
+(defrule no-savings
+    "Urgent warning when savings are zero"
+    (student-savings ?savings)
+    (test (= ?savings 0))
+    =>
+    (printout t "URGENT: Zero monthly savings! "
+        "Any unexpected expense becomes a crisis." crlf)
+    (assert (warning no-savings))
+)
