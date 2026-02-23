@@ -171,3 +171,15 @@
         "or request credit limit increase." crlf)
     (assert (warning dangerous-credit))
 )
+
+
+(defrule no-emergency-fund
+"Urgent warning when emergency fund is zero"
+(student-emergency-fund ?fund)
+(test (= ?fund 0))
+=>
+(printout t "URGENT: No emergency fund at all!" crlf)
+(printout t "RECOMMENDATION: Save $1000 before "
+"any other financial goal" crlf)
+(assert (warning no-emergency-fund))
+)
