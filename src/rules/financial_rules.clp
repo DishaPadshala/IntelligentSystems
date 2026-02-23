@@ -198,3 +198,20 @@
 "fund before discretionary spending" crlf)
 (assert (warning low-emergency-fund))
 )
+
+(defrule tfsa-contribution-reminder
+"Suggest TFSA when emergency fund is adequate"
+(student-savings ?savings)
+(emergency-fund-minimum ?min)
+(student-tfsa-contributions ?tfsa)
+(tfsa-limit-2025 ?limit)
+(test (> ?savings ?min))
+(test (< ?tfsa ?limit))
+=>
+(printout t "TIP: $" (- ?limit ?tfsa)
+" TFSA room available this year" crlf)
+(printout t "RECOMMENDATION: Contribute to TFSA "
+"for tax-free investment growth" crlf)
+(assert (recommendation tfsa))
+)
+
