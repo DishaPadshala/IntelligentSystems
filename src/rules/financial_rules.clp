@@ -183,3 +183,18 @@
 "any other financial goal" crlf)
 (assert (warning no-emergency-fund))
 )
+
+
+(defrule low-emergency-fund
+"Warn when emergency fund exists but below $1000"
+(student-emergency-fund ?fund)
+(emergency-fund-minimum ?minimum)
+(test (> ?fund 0))
+(test (< ?fund ?minimum))
+=>
+(printout t "WARNING: Emergency fund $" ?fund
+" is below $" ?minimum " minimum" crlf)
+(printout t "RECOMMENDATION: Top up emergency "
+"fund before discretionary spending" crlf)
+(assert (warning low-emergency-fund))
+)
