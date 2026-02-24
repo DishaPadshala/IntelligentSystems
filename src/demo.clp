@@ -1,12 +1,13 @@
 ;;;======================================================
 ;;; INTEGRATED DEMO - Student Financial Decision System
+;;; Loads: Facts + Rules + Complete Test
 ;;;======================================================
 
 ;;; Load all components
 (load "src/facts/financial_facts.clp")
 (load "src/rules/financial_rules.clp")
 
-;;; Complete test scenario with all data needed
+;;; Complete test scenario
 (deffacts complete-test-student
     "Test student with complete financial profile"
     (student-income 2000)
@@ -22,11 +23,3 @@
     (student-credit-card-apr 19.99)
     (student-tfsa-contributions 2000)
 )
-
-;;; Display instructions
-(printout t "========================================" crlf)
-(printout t "Student Financial Decision System" crlf)
-(printout t "========================================" crlf)
-(printout t "System loaded successfully!" crlf)
-(printout t "Type (reset) then (run) to analyze" crlf)
-(printout t "========================================" crlf)
