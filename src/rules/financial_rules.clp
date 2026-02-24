@@ -115,6 +115,19 @@
         "TFSA or index funds" crlf)
     (assert (status healthy-surplus))
 )
+;;; Rule 11 - Debt above 15% high interest threshold
+(defrule high-interest-debt-priority
+    "Flag debt with interest rate above 15%"
+    (student-debt ?debt)
+    (debt-interest-rate ?rate)
+    (high-interest-threshold ?threshold)
+    (test (> ?debt 0))
+    (test (> ?rate ?threshold))
+    =>
+    (printout t "URGENT: Debt of $" ?debt " at " ?rate "% APR exceeds " ?threshold "% threshold" crlf)
+    (printout t "RECOMMENDATION: Prioritize paying this debt before other goals" crlf)
+    (assert (priority pay-high-interest-debt))
+)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Rule 12 - Credit Card Debt Warning
@@ -215,3 +228,38 @@
 (assert (recommendation tfsa))
 )
 
+;;; Rule 18 - Chained: fires when BOTH debt priority AND low emergency fund warnings exist
+(defrule debt-vs-savings-strategy
+    "Resolve conflict between debt and savings goals"
+    (priority pay-high-interest-debt)
+    (warning low-emergency-fund)
+    =>
+    (printout t "STRATEGY: Competing priorities detected - debt vs savings" crlf)
+    (printout t "RECOMMENDATION: Allocate 70% of available money to debt, 30% to emergency fund" crlf)
+    (assert (recommendation split-strategy))
+)
+
+;;; Rule 19 - Concrete 50/30/20 dollar amounts
+(defrule budget-allocation-advice
+    "Calculate and display 50/30/20 dollar amounts"
+    (student-income ?income)
+    (fifty-thirty-twenty-needs ?needs)
+    (fifty-thirty-twenty-wants ?wants)
+    (fifty-thirty-twenty-savings ?sav)
+    =>
+    (printout t "BUDGET ALLOCATION (50/30/20):" crlf)
+    (printout t "  Needs:    $" (round (* ?income (/ ?needs 100))) " (rent, food, transport)" crlf)
+    (printout t "  Wants:    $" (round (* ?income (/ ?wants 100))) " (entertainment, dining)" crlf)
+    (printout t "  Savings:  $" (round (* ?income (/ ?sav 100))) " (emergency, investments)" crlf)
+)
+
+;;; Rule 20 - Chained: fires only when NO warnings
+(defrule financial-health-summary
+    "Positive overall assessment when no warnings"
+    (status debt-free)
+    (not (warning ?))
+    =>
+    (printout t "OVERALL: Finances are in excellent shape - no issues detected!" crlf)
+    (printout t "Consider long-term goals: RRSP, index funds, or education savings." crlf)
+    (assert (status financially-healthy))
+)
