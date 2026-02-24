@@ -41,19 +41,3 @@
     (tfsa-limit-2025 7000)
 )
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Test Scenario
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(deffacts test-scenario
-    (student-income 1500)
-    (student-rent 700)
-    (student-fixed-expenses 600)
-    (student-variable-expenses 300)
-    (student-savings 100)
-    (student-credit-card-debt 2000)
-    (student-credit-card-apr 22)
-    (student-credit-utilization 45)
-    (student-debt 5000)
-    (debt-interest-rate 18)
-)
