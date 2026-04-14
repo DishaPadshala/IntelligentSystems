@@ -280,3 +280,21 @@
 (printout t &quot;URGENT: Cut expenses, increase income&quot; crlf)
 (assert (financial-health crisis))
 )
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 12: Acceptable Budget + Adequate Savings = Stable
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defrule acceptable-budget-adequate-savings
+&quot;Acceptable budget with adequate savings indicates stability&quot;
+(budget-balance acceptable)
+(savings adequate)
+=&gt;
+(printout t crlf &quot;--- Fuzzy Rule Fired ---&quot; crlf)
+(printout t &quot;Rule: Acceptable Budget + Adequate Savings&quot; crlf)
+(printout t &quot;Conclusion: FINANCIALLY STABLE&quot; crlf)
+(printout t &quot;Status: On the right track&quot; crlf)
+(assert (financial-health stable))
+)
