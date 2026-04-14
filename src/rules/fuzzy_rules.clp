@@ -298,3 +298,26 @@
 (printout t &quot;Status: On the right track&quot; crlf)
 (assert (financial-health stable))
 )
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 13: Good Budget + Excellent Savings + Low Debt = Excellent Health
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defrule excellent-financial-health
+&quot;Combination of good indicators shows excellent financial health&quot;
+(budget-balance good)
+(savings excellent)
+(debt low)
+=&gt;
+(printout t crlf &quot;========================================&quot; crlf)
+(printout t &quot;EXCELLENT FINANCIAL HEALTH&quot; crlf)
+(printout t &quot;========================================&quot; crlf)
+(printout t &quot;Budget: Surplus&quot; crlf)
+(printout t &quot;Savings: Excellent&quot; crlf)
+(printout t &quot;Debt: Low&quot; crlf)
+(printout t &quot;Conclusion: OUTSTANDING financial position&quot; crlf)
+(printout t &quot;You&#39;re doing everything right!&quot; crlf)
+(printout t &quot;========================================&quot; crlf)
+(assert (financial-health excellent))
+)
