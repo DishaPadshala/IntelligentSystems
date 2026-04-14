@@ -2,7 +2,7 @@
 ;;; FUZZY LOGIC RULES
 ; --- Disha section ---
 ;;; File: src/rules/fuzzy_rules.clp
-;;; Authors: [Disha - Rules 1-4], Sneha Khoreja - Rules 5-8
+;;; Authors: [Disha - Rules 1-4], Sneha Khoreja - Rules 5-8, Siya Patel- Rules 9-14
 ;;; Date: April 2026
 ;;; Course: COMP 474/6741 - Intelligent Systems
 ;;; Description: Rules modeling possibilistic uncertainty
@@ -224,4 +224,23 @@
     (printout t "Recommendation: Continue current repayment plan" crlf)
     (assert (financial-risk low))
 
+)
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 9: Poor Budget + High Debt = Severe Risk
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defrule poor-budget-high-debt
+&quot;Poor budget balance with high debt creates severe risk&quot;
+(budget-balance poor)
+(debt high)
+=&gt;
+(printout t crlf &quot;--- Fuzzy Rule Fired ---&quot; crlf)
+(printout t &quot;Rule: Poor Budget + High Debt&quot; crlf)
+(printout t &quot;Conclusion: SEVERE financial risk&quot; crlf)
+(printout t &quot;Expenses exceed income AND debt is high&quot; crlf)
+(printout t &quot;CRITICAL: Reduce expenses immediately&quot; crlf)
+(assert (financial-risk severe))
 )
