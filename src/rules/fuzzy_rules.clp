@@ -262,3 +262,21 @@
 (assert (financial-risk low))
 )
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 11: Poor Budget + No Savings = Crisis
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defrule poor-budget-no-savings-crisis
+&quot;Poor budget with no savings is a financial crisis&quot;
+(budget-balance poor)
+(savings none)
+=&gt;
+(printout t crlf &quot;--- Fuzzy Rule Fired ---&quot; crlf)
+(printout t &quot;Rule: Poor Budget + No Savings&quot; crlf)
+(printout t &quot;Conclusion: FINANCIAL CRISIS&quot; crlf)
+(printout t &quot;Over budget with zero safety net&quot; crlf)
+
+(printout t &quot;URGENT: Cut expenses, increase income&quot; crlf)
+(assert (financial-health crisis))
+)
