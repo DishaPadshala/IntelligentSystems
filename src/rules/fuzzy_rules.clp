@@ -244,3 +244,21 @@
 (printout t &quot;CRITICAL: Reduce expenses immediately&quot; crlf)
 (assert (financial-risk severe))
 )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 10: Good Budget + Low Debt = Low Risk
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defrule good-budget-low-debt
+&quot;Good budget balance with low debt indicates low risk&quot;
+(budget-balance good)
+(debt low)
+=&gt;
+(printout t crlf &quot;--- Fuzzy Rule Fired ---&quot; crlf)
+(printout t &quot;Rule: Good Budget + Low Debt&quot; crlf)
+(printout t &quot;Conclusion: LOW financial risk&quot; crlf)
+(printout t &quot;Status: Finances are healthy&quot; crlf)
+(printout t &quot;Keep it up!&quot; crlf)
+(assert (financial-risk low))
+)
+
