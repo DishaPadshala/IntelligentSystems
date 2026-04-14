@@ -321,3 +321,26 @@
 (printout t &quot;========================================&quot; crlf)
 (assert (financial-health excellent))
 )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 14: Poor Credit + High Debt = Debt Trap Warning
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defrule poor-credit-high-debt-trap
+&quot;Poor credit with high debt indicates potential debt trap&quot;
+(credit-health poor)
+(debt high)
+=&gt;
+(printout t crlf &quot;========================================&quot; crlf)
+(printout t &quot;DEBT TRAP WARNING&quot; crlf)
+(printout t &quot;========================================&quot; crlf)
+(printout t &quot;Credit Health: Poor (high utilization)&quot; crlf)
+(printout t &quot;Debt Level: High&quot; crlf)
+(printout t &quot;WARNING: Risk of debt spiral&quot; crlf)
+(printout t &quot;High utilization = high interest charges&quot; crlf)
+(printout t &quot;RECOMMENDATION: Stop using credit cards&quot; crlf)
+(printout t &quot;Focus: Pay down highest interest debt first&quot; crlf)
+(printout t &quot;========================================&quot; crlf)
+
+(assert (debt-trap-risk high))
+)
