@@ -132,3 +132,31 @@
     )
 
 )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Budget Balance Template
+;;; Universe: -100 to 100 percent (negative = over budget)
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(deftemplate budget-balance
+-100 100 percent
+(
+(poor (-100 1) (-20 1) (0 0))
+(acceptable (-10 0) (5 1) (15 0))
+(good (10 0) (30 1) (100 1))
+)
+)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Financial Risk Level Template
+;;; Universe: 0 to 100 risk score
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(deftemplate financial-risk
+0 100 score
+(
+(low (0 1) (20 1) (35 0))
+(moderate (30 0) (50 1) (65 0))
+(high (60 0) (75 1) (85 0))
+(severe (80 0) (95 1) (100 1))
+)
+)
