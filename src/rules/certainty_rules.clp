@@ -228,3 +228,22 @@
 (printout t &quot;Expected Drop: 50-100 points&quot; crlf)
 (assert (credit-damage severe))
 )
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 10: Zero Savings Stress (CF 0.75)
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defrule zero-savings-stress
+(declare (CF 0.75))
+&quot;No savings indicates financial vulnerability&quot;
+(student-savings ?savings)
+(test (= ?savings 0))
+=&gt;
+(printout t crlf &quot;--- Financial Stress Indicator ---&quot; crlf)
+(printout t &quot;Type: Zero Savings&quot; crlf)
+(printout t &quot;Savings: $0&quot; crlf)
+(printout t &quot;Certainty: 75%&quot; crlf)
+(printout t &quot;Risk: No buffer against emergencies&quot; crlf)
+(assert (financial-stress no-savings))
+)
