@@ -220,16 +220,16 @@
 ;;; Author: Siya
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defrule poor-budget-high-debt
-&quot;Poor budget balance with high debt creates severe risk&quot;
-(budget-balance poor)
-(debt high)
-=&gt;
-(printout t crlf &quot;--- Fuzzy Rule Fired ---&quot; crlf)
-(printout t &quot;Rule: Poor Budget + High Debt&quot; crlf)
-(printout t &quot;Conclusion: SEVERE financial risk&quot; crlf)
-(printout t &quot;Expenses exceed income AND debt is high&quot; crlf)
-(printout t &quot;CRITICAL: Reduce expenses immediately&quot; crlf)
-(assert (financial-risk severe))
+    "Poor budget balance with high debt creates severe risk"
+    (budget-balance poor)
+    (debt high)
+    =>
+    (printout t crlf "--- Fuzzy Rule Fired ---" crlf)
+    (printout t "Rule: Poor Budget + High Debt" crlf)
+    (printout t "Conclusion: SEVERE financial risk" crlf)
+    (printout t "Expenses exceed income AND debt is high" crlf)
+    (printout t "CRITICAL: Reduce expenses immediately" crlf)
+    (assert (financial-risk severe))
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -237,16 +237,16 @@
 ;;; Author: Siya
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defrule good-budget-low-debt
-&quot;Good budget balance with low debt indicates low risk&quot;
-(budget-balance good)
-(debt low)
-=&gt;
-(printout t crlf &quot;--- Fuzzy Rule Fired ---&quot; crlf)
-(printout t &quot;Rule: Good Budget + Low Debt&quot; crlf)
-(printout t &quot;Conclusion: LOW financial risk&quot; crlf)
-(printout t &quot;Status: Finances are healthy&quot; crlf)
-(printout t &quot;Keep it up!&quot; crlf)
-(assert (financial-risk low))
+    "Good budget balance with low debt indicates low risk"
+    (budget-balance good)
+    (debt low)
+    =>
+    (printout t crlf "--- Fuzzy Rule Fired ---" crlf)
+    (printout t "Rule: Good Budget + Low Debt" crlf)
+    (printout t "Conclusion: LOW financial risk" crlf)
+    (printout t "Status: Finances are healthy" crlf)
+    (printout t "Keep it up!" crlf)
+    (assert (financial-risk low))
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -254,17 +254,16 @@
 ;;; Author: Siya
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defrule poor-budget-no-savings-crisis
-&quot;Poor budget with no savings is a financial crisis&quot;
-(budget-balance poor)
-(savings none)
-=&gt;
-(printout t crlf &quot;--- Fuzzy Rule Fired ---&quot; crlf)
-(printout t &quot;Rule: Poor Budget + No Savings&quot; crlf)
-(printout t &quot;Conclusion: FINANCIAL CRISIS&quot; crlf)
-(printout t &quot;Over budget with zero safety net&quot; crlf)
-
-(printout t &quot;URGENT: Cut expenses, increase income&quot; crlf)
-(assert (financial-health crisis))
+    "Poor budget with no savings is a financial crisis"
+    (budget-balance poor)
+    (savings none)
+    =>
+    (printout t crlf "--- Fuzzy Rule Fired ---" crlf)
+    (printout t "Rule: Poor Budget + No Savings" crlf)
+    (printout t "Conclusion: FINANCIAL CRISIS" crlf)
+    (printout t "Over budget with zero safety net" crlf)
+    (printout t "URGENT: Cut expenses, increase income" crlf)
+    (assert (financial-health crisis))
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -272,38 +271,37 @@
 ;;; Author: Siya
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defrule acceptable-budget-adequate-savings
-&quot;Acceptable budget with adequate savings indicates stability&quot;
-(budget-balance acceptable)
-(savings adequate)
-=&gt;
-(printout t crlf &quot;--- Fuzzy Rule Fired ---&quot; crlf)
-(printout t &quot;Rule: Acceptable Budget + Adequate Savings&quot; crlf)
-(printout t &quot;Conclusion: FINANCIALLY STABLE&quot; crlf)
-(printout t &quot;Status: On the right track&quot; crlf)
-(assert (financial-health stable))
+    "Acceptable budget with adequate savings indicates stability"
+    (budget-balance acceptable)
+    (savings adequate)
+    =>
+    (printout t crlf "--- Fuzzy Rule Fired ---" crlf)
+    (printout t "Rule: Acceptable Budget + Adequate Savings" crlf)
+    (printout t "Conclusion: FINANCIALLY STABLE" crlf)
+    (printout t "Status: On the right track" crlf)
+    (assert (financial-health stable))
 )
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Rule 13: Good Budget + Excellent Savings + Low Debt = Excellent Health
 ;;; Author: Siya
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defrule excellent-financial-health
-&quot;Combination of good indicators shows excellent financial health&quot;
-(budget-balance good)
-(savings excellent)
-(debt low)
-=&gt;
-(printout t crlf &quot;========================================&quot; crlf)
-(printout t &quot;EXCELLENT FINANCIAL HEALTH&quot; crlf)
-(printout t &quot;========================================&quot; crlf)
-(printout t &quot;Budget: Surplus&quot; crlf)
-(printout t &quot;Savings: Excellent&quot; crlf)
-(printout t &quot;Debt: Low&quot; crlf)
-(printout t &quot;Conclusion: OUTSTANDING financial position&quot; crlf)
-(printout t &quot;You&#39;re doing everything right!&quot; crlf)
-(printout t &quot;========================================&quot; crlf)
-(assert (financial-health excellent))
+    "Combination of good indicators shows excellent financial health"
+    (budget-balance good)
+    (savings excellent)
+    (debt low)
+    =>
+    (printout t crlf "========================================" crlf)
+    (printout t "EXCELLENT FINANCIAL HEALTH" crlf)
+    (printout t "========================================" crlf)
+    (printout t "Budget: Surplus" crlf)
+    (printout t "Savings: Excellent" crlf)
+    (printout t "Debt: Low" crlf)
+    (printout t "Conclusion: OUTSTANDING financial position" crlf)
+    (printout t "You're doing everything right!" crlf)
+    (printout t "========================================" crlf)
+    (assert (financial-health excellent))
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -311,20 +309,19 @@
 ;;; Author: Siya
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defrule poor-credit-high-debt-trap
-&quot;Poor credit with high debt indicates potential debt trap&quot;
-(credit-health poor)
-(debt high)
-=&gt;
-(printout t crlf &quot;========================================&quot; crlf)
-(printout t &quot;DEBT TRAP WARNING&quot; crlf)
-(printout t &quot;========================================&quot; crlf)
-(printout t &quot;Credit Health: Poor (high utilization)&quot; crlf)
-(printout t &quot;Debt Level: High&quot; crlf)
-(printout t &quot;WARNING: Risk of debt spiral&quot; crlf)
-(printout t &quot;High utilization = high interest charges&quot; crlf)
-(printout t &quot;RECOMMENDATION: Stop using credit cards&quot; crlf)
-(printout t &quot;Focus: Pay down highest interest debt first&quot; crlf)
-(printout t &quot;========================================&quot; crlf)
-
-(assert (debt-trap-risk high))
+    "Poor credit with high debt indicates potential debt trap"
+    (credit-health poor)
+    (debt high)
+    =>
+    (printout t crlf "========================================" crlf)
+    (printout t "DEBT TRAP WARNING" crlf)
+    (printout t "========================================" crlf)
+    (printout t "Credit Health: Poor (high utilization)" crlf)
+    (printout t "Debt Level: High" crlf)
+    (printout t "WARNING: Risk of debt spiral" crlf)
+    (printout t "High utilization = high interest charges" crlf)
+    (printout t "RECOMMENDATION: Stop using credit cards" crlf)
+    (printout t "Focus: Pay down highest interest debt first" crlf)
+    (printout t "========================================" crlf)
+    (assert (debt-trap-risk high))
 )
