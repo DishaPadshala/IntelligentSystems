@@ -93,9 +93,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (deffacts budget-success-certainties
-    "Certainty factors for predicting budget adherence success.
-     CF values derived from financial behavior research.
-     Source: Lusardi & Mitchell (2014), Robb & Sharpe (2009)."
+    "Certainty factors for budget adherence success"
 
     ; Realistic spending targets (within income) = high success predictor
     ; CF 0.80: Strong evidence that feasibility predicts budget adherence
