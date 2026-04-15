@@ -146,7 +146,6 @@
     (printout t "---------------------------------------" crlf)
 )
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Rule 7: Budget Success Likely
 ;;; Structured English:
@@ -181,12 +180,85 @@
     (printout t "---------------------------------------" crlf)
 )
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 8: Payday Loan Trap Risk (CF 0.92)
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defrule payday-loan-trap-risk
+    (declare (CF 0.92))
+    "Low income + no savings = payday loan vulnerability"
+    (student-income ?income)
+    (student-savings ?savings)
+    (test (< ?income 1500))
+    (test (< ?savings 100))
+    =>
+    (printout t crlf "========================================" crlf)
+    (printout t "PAYDAY LOAN TRAP WARNING" crlf)
+    (printout t "========================================" crlf)
+    (printout t "Income: $" ?income crlf)
+    (printout t "Savings: $" ?savings crlf)
+    (printout t "Certainty: 92%" crlf)
+    (printout t "Risk: VERY HIGH" crlf)
+    (printout t "WARNING: Payday loans charge 300%+ APR" crlf)
+    (printout t "AVOID: Never use payday loans" crlf)
+    (printout t "========================================" crlf)
+    (assert (payday-loan-risk very-high))
+)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 9: Severe Credit Damage (CF 0.90)
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defrule severe-credit-damage
+    (declare (CF 0.90))
+    "High utilization + missed payments = severe credit damage"
+    (student-credit-utilization ?util)
+    (student-missed-payments ?missed)
+    (test (> ?util 70))
+    (test (>= ?missed 1))
+    =>
+    (printout t crlf "--- Credit Score Damage Prediction ---" crlf)
+    (printout t "Utilization: " ?util "%" crlf)
+    (printout t "Missed Payments: " ?missed crlf)
+    (printout t "Certainty: 90%" crlf)
+    (printout t "Prediction: SEVERE damage" crlf)
+    (printout t "Expected Drop: 50-100 points" crlf)
+    (assert (credit-damage severe))
+)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 10: Zero Savings Stress (CF 0.75)
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defrule zero-savings-stress
+    (declare (CF 0.75))
+    "No savings indicates financial vulnerability"
+    (student-savings ?savings)
+    (test (= ?savings 0))
+    =>
+    (printout t crlf "--- Financial Stress Indicator ---" crlf)
+    (printout t "Type: Zero Savings" crlf)
+    (printout t "Savings: $0" crlf)
+    (printout t "Certainty: 75%" crlf)
+    (printout t "Risk: No buffer against emergencies" crlf)
+    (assert (financial-stress no-savings))
+)
 
-
-
-
-
-
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 11: Moderate Credit Damage (CF 0.65)
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defrule moderate-credit-damage
+    (declare (CF 0.65))
+    "Moderate utilization indicates some credit damage"
+    (student-credit-utilization ?util)
+    (test (and (> ?util 50) (<= ?util 70)))
+    =>
+    (printout t crlf "--- Credit Score Damage Prediction ---" crlf)
+    (printout t "Utilization: " ?util "%" crlf)
+    (printout t "Certainty: 65%" crlf)
+    (printout t "Prediction: MODERATE impact" crlf)
+    (printout t "Expected Drop: 20-40 points" crlf)
+    (printout t "RECOMMENDATION: Pay down balances" crlf)
+    (assert (credit-damage moderate))
+)
