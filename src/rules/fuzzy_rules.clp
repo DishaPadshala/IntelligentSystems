@@ -214,6 +214,7 @@
     (printout t "RECOMMENDATION: Start TFSA contributions" crlf)
     (printout t "Consider: Low-cost index funds for long-term growth" crlf)
     (printout t "--------------------------" crlf)
+)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Rule 9: Poor Budget + High Debt = Severe Risk
