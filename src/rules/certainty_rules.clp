@@ -262,3 +262,16 @@
     (printout t "RECOMMENDATION: Pay down balances" crlf)
     (assert (credit-damage moderate))
 )
+
+;;; Meta-rule to demonstrate CF combination
+(defrule demonstrate-mycin-combination
+    (financial-stress high-debt)
+    (financial-stress payment-issues)
+    =>
+    (printout t crlf "=== MYCIN CF COMBINATION EXAMPLE ===" crlf)
+    (printout t "Rule 1 (high-debt): CF = 0.85" crlf)
+    (printout t "Rule 2 (late-payment): CF = 0.90" crlf)
+    (bind ?combined (+ 0.85 (* 0.90 (- 1 0.85))))
+    (printout t "Combined: 0.85 + 0.90×(1-0.85) = " ?combined crlf)
+    (printout t "Combined certainty: " (* ?combined 100) "%" crlf)
+)
