@@ -179,38 +179,6 @@ If CMHC says 30% is the affordability threshold, Equifax says 30% is where credi
 
 ---
 
-## Source Documentation
-
-Every fact and threshold is tied to specific sources. Here's the complete list:
-
-**Government (Canada):**
-- [CRA - TFSA limits](https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/tax-free-savings-account.html)
-- [CMHC - Housing affordability](https://www.cmhc-schl.gc.ca/professionals/housing-markets-data-and-research/housing-research/core-housing-need)
-- [FCAC - Budgeting](https://www.canada.ca/en/financial-consumer-agency/services/make-budget.html)
-- [FCAC - Debt management](https://www.canada.ca/en/financial-consumer-agency/services/debt.html)
-- [Bank of Canada - Interest rates](https://www.bankofcanada.ca/rates/)
-- [Statistics Canada - Household spending](https://www150.statcan.gc.ca/n1/daily-quotidien/231219/dq231219a-eng.htm)
-
-**Credit Industry:**
-- [Equifax Canada - Credit scores](https://www.consumer.equifax.ca/personal/education/credit-score/what-affects-your-credit-score/)
-- [TransUnion Canada - Credit education](https://www.transunion.ca/credit-education)
-- [CFPB - Credit utilization](https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-utilization-rate-or-ratio-en-1597/)
-- [CFPB - Debt-to-income ratios](https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-why-is-the-43-debt-to-income-ratio-important-en-1791/)
-
-**Academic Research:**
-- Lusardi, A. & Mitchell, O.S. (2014). "The Economic Importance of Financial Literacy: Theory and Evidence." *Journal of Economic Literature*, 52(1), 5-44. [Available here](https://www.aeaweb.org/articles?id=10.1257/jel.52.1.5)
-- Robb, C.A. & Sharpe, D.L. (2009). "Effect of Personal Financial Knowledge on College Students' Credit Card Behavior." *Journal of Financial Counseling and Planning*, 20(1). [Available here](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2224225)
-
-**Books:**
-- Sethi, R. (2019). *I Will Teach You To Be Rich* (2nd ed.). Workman Publishing.
-- Warren, E. & Tyagi, A.W. (2006). *All Your Worth: The Ultimate Lifetime Money Plan*. Free Press.
-- Chilton, D. (1989). *The Wealthy Barber*. Stoddart Publishing.
-
-**Community:**
-- [r/PersonalFinanceCanada Wiki](https://www.reddit.com/r/PersonalFinanceCanada/wiki/index/)
-- [r/PersonalFinanceCanada Money Steps](https://www.reddit.com/r/PersonalFinanceCanada/wiki/money-steps/)
-
----
 
 ## Confidence Ratings Summary
 
@@ -594,5 +562,153 @@ Fuzzy boundaries aligned with our lived experience as students.
 - Trapezoidal for "EXCELLENT credit" (0-10% plateau): 2% is not "more excellent" than 8%
 
 This follows Zadeh's (1965) principle: shape should reflect semantic structure of the category.
+
+---
+
+---
+
+## Source Documentation
+
+Every fact and threshold is tied to specific sources. Here's the complete list with links:
+
+---
+
+### **Government (Canada)**
+
+1. **Canada Revenue Agency - TFSA limits**  
+   https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/tax-free-savings-account.html
+
+2. **Canada Mortgage and Housing Corporation - Housing affordability**  
+   https://www.cmhc-schl.gc.ca/professionals/housing-markets-data-and-research/housing-research/core-housing-need
+
+3. **Financial Consumer Agency of Canada - Budgeting**  
+   https://www.canada.ca/en/financial-consumer-agency/services/make-budget.html
+
+4. **Financial Consumer Agency of Canada - Debt management**  
+   https://www.canada.ca/en/financial-consumer-agency/services/debt.html
+
+5. **Bank of Canada - Interest rates**  
+   https://www.bankofcanada.ca/rates/
+
+6. **Statistics Canada - Household spending**  
+   https://www150.statcan.gc.ca/n1/daily-quotidien/231219/dq231219a-eng.htm
+
+---
+
+### **Credit Industry**
+
+7. **Equifax Canada - Credit scores**  
+   https://www.consumer.equifax.ca/personal/education/credit-score/what-affects-your-credit-score/
+
+8. **Equifax Canada - Credit utilization**  
+   https://www.consumer.equifax.ca/personal/education/credit-score/what-is-credit-utilization/
+
+9. **TransUnion Canada - Credit education**  
+   https://www.transunion.ca/credit-education
+
+10. **Consumer Financial Protection Bureau (US) - Credit utilization**  
+    https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-utilization-rate-or-ratio-en-1597/
+
+11. **Consumer Financial Protection Bureau (US) - Debt-to-income ratios**  
+    https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-why-is-the-43-debt-to-income-ratio-important-en-1791/
+
+---
+
+### **Academic Research**
+
+12. **Lusardi, A. & Mitchell, O.S. (2014)**  
+    "The Economic Importance of Financial Literacy: Theory and Evidence"  
+    *Journal of Economic Literature*, 52(1), 5-44  
+    https://www.aeaweb.org/articles?id=10.1257/jel.52.1.5
+
+13. **Robb, C.A. & Sharpe, D.L. (2009)**  
+    "Effect of Personal Financial Knowledge on College Students' Credit Card Behavior"  
+    *Journal of Financial Counseling and Planning*, 20(1)  
+    https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2224225
+
+---
+
+### **Books**
+
+14. **Sethi, R. (2019)**  
+    *I Will Teach You To Be Rich* (2nd ed.)  
+    Workman Publishing  
+    ISBN: 978-1523505746
+
+15. **Warren, E. & Tyagi, A.W. (2006)**  
+    *All Your Worth: The Ultimate Lifetime Money Plan*  
+    Free Press  
+    ISBN: 978-0743269889
+
+16. **Chilton, D. (1989)**  
+    *The Wealthy Barber*  
+    Stoddart Publishing  
+    ISBN: 978-0773760165
+
+---
+
+### **Community Resources**
+
+17. **r/PersonalFinanceCanada Wiki**  
+    https://www.reddit.com/r/PersonalFinanceCanada/wiki/index/
+
+18. **r/PersonalFinanceCanada Money Steps**  
+    https://www.reddit.com/r/PersonalFinanceCanada/wiki/money-steps/
+
+---
+
+### **Certainty Factor & Fuzzy Logic Theory**
+
+19. **Shortliffe, E.H. & Buchanan, B.G. (1975)**  
+    "A model of inexact reasoning in medicine"  
+    *Mathematical Biosciences*, 23, 351-379  
+    https://doi.org/10.1016/0025-5564(75)90047-4
+
+20. **Zadeh, L.A. (1965)**  
+    "Fuzzy sets"  
+    *Information and Control*, 8(3), 338-353  
+    https://doi.org/10.1016/S0019-9958(65)90241-X
+
+21. **Orchard, B. (1994)**  
+    *FuzzyCLIPS Version 6.04 User Guide*  
+    National Research Council Canada  
+    https://github.com/rorchard/FuzzyCLIPS
+
+---
+
+### **Federal Student Loan Research**
+
+22. **U.S. Department of Education - Federal Student Aid**  
+    National Student Loan Default Rates  
+    https://www2.ed.gov/offices/OSFAP/defaultmanagement/cdr.html
+
+23. **Federal Reserve - Household Debt Reports**  
+    https://www.federalreserve.gov/publications.htm
+
+---
+
+### **FCAC Payday Loan Research**
+
+24. **Financial Consumer Agency of Canada - Payday Loans**  
+    https://www.canada.ca/en/financial-consumer-agency/services/loans/payday-loans.html
+
+25. **FCAC - Payday Loan Consumer Study (2016)**  
+    Research on payday loan usage patterns  
+    https://www.canada.ca/en/financial-consumer-agency/programs/research.html
+
+---
+
+## Total Sources: 25
+
+**Breakdown by type:**
+- Government/Official: 11 sources
+- Credit Industry: 5 sources  
+- Academic Research: 2 peer-reviewed papers
+- Books: 3 published works
+- Community: 2 validated forums
+- Theory: 2 foundational papers
+
+**All thresholds have minimum 3 independent sources confirming the value.**
+
 
 ---
