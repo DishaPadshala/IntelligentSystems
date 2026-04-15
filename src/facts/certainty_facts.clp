@@ -53,9 +53,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (deffacts investment-readiness-certainties
-    "Certainty factors for assessing student investment readiness.
-     Each CF represents degree of belief that condition implies readiness.
-     Source: FCAC guidelines + Shortliffe (1976) CF framework."
+    "Certainty factors for assessing student investment readiness. Each CF represents degree of belief that condition implies readiness. Source: FCAC guidelines + Shortliffe (1976) CF framework."
 
     ; 6-month emergency fund = very strong readiness signal
     ; CF 0.90: Near-certain - student has cushion for major disruptions
