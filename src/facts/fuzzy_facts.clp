@@ -1,18 +1,42 @@
 ;;;======================================================
-; --- Disha section ---
 ;;; FUZZY LOGIC FACTS
-;;; File: src/facts/fuzzy_facts.clp
-;;; Authors: [Disha - income/rent templates], Sneha Khoreja
-;;; Date: April 2026
-;;; Course: COMP 474/6741 - Intelligent Systems
+;;; D2 TODO 3 - Possibilistic Uncertainty
+;;; Author: Disha (Income, Debt templates)
 ;;; Description: Membership function parameters for
 ;;;              possibilistic uncertainty modeling using
 ;;;              Fuzzy Logic Theory in student financial
 ;;;              decision support system.
-;;; Theory: Zadeh, L.A. (1965). Fuzzy Sets.
-;;;         Information and Control, 8(3), 338-353.
 ;;;======================================================
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Income Level Template
+;;; Universe: 0 to 5000 dollars/month
+;;; Author: Disha
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(deftemplate income
+    0 5000 dollars
+    (
+        (low (0 1) (1000 1) (1500 0))
+        (medium (1200 0) (2000 1) (3000 1) (3500 0))
+        (high (3000 0) (4000 1) (5000 1))
+    )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Debt Level Template
+;;; Universe: 0 to 50000 dollars
+;;; Author: Disha
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(deftemplate debt
+    0 50000 dollars
+    (
+        (low (0 1) (5000 1) (10000 0))
+        (moderate (8000 0) (15000 1) (25000 0))
+        (high (20000 0) (30000 1) (40000 0))
+        (extreme (35000 0) (45000 1) (50000 1))
+    )
+
+)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Savings Adequacy Membership Parameters
@@ -97,42 +121,6 @@
     (fuzzy-credit-poor-start   50)
     (fuzzy-credit-poor-plateau 70)
 
-; --- Sneha section ---
-;;; FUZZY LOGIC TEMPLATES
-;;; D2 TODO 3 - Possibilistic Uncertainty
-;;; Author: Disha (Income, Debt templates)
-;;;======================================================
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Income Level Template
-;;; Universe: 0 to 5000 dollars/month
-;;; Author: Disha
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(deftemplate income
-    0 5000 dollars
-    (
-        (low (0 1) (1000 1) (1500 0))
-        (medium (1200 0) (2000 1) (3000 1) (3500 0))
-        (high (3000 0) (4000 1) (5000 1))
-    )
-)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Debt Level Template
-;;; Universe: 0 to 50000 dollars
-;;; Author: Disha
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(deftemplate debt
-    0 50000 dollars
-    (
-        (low (0 1) (5000 1) (10000 0))
-        (moderate (8000 0) (15000 1) (25000 0))
-        (high (20000 0) (30000 1) (40000 0))
-        (extreme (35000 0) (45000 1) (50000 1))
-    )
-
-)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Budget Balance Template
 ;;; Universe: -100 to 100 percent (negative = over budget)
@@ -146,6 +134,7 @@
 (good (10 0) (30 1) (100 1))
 )
 )
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Financial Risk Level Template
 ;;; Universe: 0 to 100 risk score
