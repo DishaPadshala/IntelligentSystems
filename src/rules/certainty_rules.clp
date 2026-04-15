@@ -238,7 +238,7 @@
 (declare (CF 0.75))
 &quot;No savings indicates financial vulnerability&quot;
 (student-savings ?savings)
-(test (= ?savings 0))
+(test (< ?savings 100))
 =&gt;
 (printout t crlf &quot;--- Financial Stress Indicator ---&quot; crlf)
 (printout t &quot;Type: Zero Savings&quot; crlf)
