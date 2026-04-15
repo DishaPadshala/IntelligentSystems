@@ -205,3 +205,26 @@
 (printout t &quot;========================================&quot; crlf)
 (assert (payday-loan-risk very-high))
 )
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 9: Severe Credit Damage (CF 0.90)
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defrule severe-credit-damage
+(declare (CF 0.90))
+&quot;High utilization + missed payments = severe credit damage&quot;
+(student-credit-utilization ?util)
+(student-missed-payments ?missed)
+(test (&gt; ?util 70))
+(test (&gt;= ?missed 1))
+=&gt;
+(printout t crlf &quot;--- Credit Score Damage Prediction ---&quot; crlf)
+(printout t &quot;Utilization: &quot; ?util &quot;%&quot; crlf)
+(printout t &quot;Missed Payments: &quot; ?missed crlf)
+(printout t &quot;Certainty: 90%&quot; crlf)
+
+(printout t &quot;Prediction: SEVERE damage&quot; crlf)
+(printout t &quot;Expected Drop: 50-100 points&quot; crlf)
+(assert (credit-damage severe))
+)
