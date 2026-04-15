@@ -48,10 +48,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (deffacts fuzzy-savings-parameters
-    "Triangular/trapezoidal membership function boundaries
-     for savings adequacy linguistic variable.
-     Universe of discourse: 0 to 15000 dollars.
-     Source: FCAC guidelines + Sethi (2019)."
+    "Triangular/trapezoidal membership function boundaries for savings adequacy linguistic variable. Universe of discourse: 0 to 15000 dollars. Source: FCAC guidelines + Sethi (2019)."
 
     ; NONE: full membership at $0, zero membership at $100
     ; Represents: student has essentially no savings
@@ -90,10 +87,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (deffacts fuzzy-credit-parameters
-    "Trapezoidal membership function boundaries for
-     credit health linguistic variable.
-     Universe of discourse: 0 to 100 percent utilization.
-     Source: Equifax Canada + CFPB guidelines."
+    "Trapezoidal membership function boundaries for credit health linguistic variable. Universe of discourse: 0 to 100 percent utilization. Source: Equifax Canada + CFPB guidelines."
 
     ; EXCELLENT: plateau 0-10%, zero at 20%
     ; Represents: optimal credit utilization
