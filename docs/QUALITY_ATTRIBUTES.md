@@ -363,7 +363,7 @@ User understands:
 
 ---
 
-## Future Improvements (D3 Scope)
+## Future Improvements
 
 1. **Explainability:** Add severity filtering to reduce information overload
 2. **Maintainability:** Create web interface for non-technical threshold updates
