@@ -107,6 +107,7 @@
     ; CF 0.70: Awareness of spending correlates with adherence
     ; Source: Lusardi & Mitchell (2014) - financial literacy impact
     (budget-success-cf tracked-spending 0.70)
+)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Credit Health CFs
