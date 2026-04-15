@@ -179,3 +179,29 @@
     (printout t "RECOMMENDATION: Maintain habits, automate savings" crlf)
     (printout t "---------------------------------------" crlf)
 )
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rule 8: Payday Loan Trap Risk (CF 0.92)
+;;; Author: Siya
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defrule payday-loan-trap-risk
+(declare (CF 0.92))
+&quot;Low income + no savings = payday loan vulnerability&quot;
+(student-income ?income)
+(student-savings ?savings)
+(test (&lt; ?income 1500))
+(test (&lt; ?savings 100))
+=&gt;
+(printout t crlf &quot;========================================&quot; crlf)
+(printout t &quot;PAYDAY LOAN TRAP WARNING&quot; crlf)
+(printout t &quot;========================================&quot; crlf)
+(printout t &quot;Income: $&quot; ?income crlf)
+(printout t &quot;Savings: $&quot; ?savings crlf)
+(printout t &quot;Certainty: 92%&quot; crlf)
+(printout t &quot;Risk: VERY HIGH&quot; crlf)
+(printout t &quot;WARNING: Payday loans charge 300%+ APR&quot; crlf)
+(printout t &quot;AVOID: Never use payday loans&quot; crlf)
+(printout t &quot;========================================&quot; crlf)
+(assert (payday-loan-risk very-high))
+)
