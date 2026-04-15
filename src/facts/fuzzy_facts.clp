@@ -114,6 +114,7 @@
     ; Source: dangerous-credit-threshold = 50% from financial_facts.clp
     (fuzzy-credit-poor-start   50)
     (fuzzy-credit-poor-plateau 70)
+)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Budget Balance Template
