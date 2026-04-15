@@ -112,3 +112,16 @@
     ; Source: Lusardi & Mitchell (2014) - financial literacy impact
     (budget-success-cf tracked-spending 0.70)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Credit Health CFs
+;;; Source: Credit bureau research
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(deffacts credit-health-certainties
+    "Certainty factors for credit health indicators"
+    (credit-health-cf excellent-score 0.95)        ; 95% certain excellent
+    (credit-health-cf good-score 0.80)             ; 80% certain good
+    (credit-health-cf fair-score 0.60)             ; 60% certain fair
+    (credit-health-cf poor-score 0.85)             ; 85% certain poor
+    (credit-health-cf zero-utilization 0.90)       ; 90% certain healthy
+)
+
